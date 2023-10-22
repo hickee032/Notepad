@@ -34,9 +34,40 @@ namespace NotePad.Classes
         private string _defaultName = "New Item";
         #endregion
 
-        public void AddNewTabItem() {
+        public void AddNewTabItem(string text, string header) {
             TabItem tab = new TabItem();
             TextBox tb = new TextBox();
+
+            ContextMenu cm = new ContextMenu();
+
+            MenuItem mi1 = new MenuItem();
+            mi1.Uid = 0.ToString();
+            mi1.Header = "Select All Text";
+            mi1.Click += TextboxMenuClicks;
+
+            MenuItem mi2 = new MenuItem();
+            mi2.Uid = 1.ToString();
+            mi2.Header = "Save file";
+            mi2.Click += TextboxMenuClicks;
+
+            cm.Items.Add(mi1);
+            cm.Items.Add(mi2);
+
+            tb.ContextMenu= cm;
+            tb.AutoWordSelection = true;
+            tb.Text = "";
+            tb.AcceptsReturn= true;
+        }
+
+        private void TextboxMenuClicks(object sender, System.Windows.RoutedEventArgs e) {
+
+            switch (int.Parse(((MenuItem)e.Source).Uid)) {
+                
+                case 0: break;
+                case 1: break;
+
+            }
+            
         }
     }
 }
