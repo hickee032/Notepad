@@ -11,6 +11,7 @@
             <MenuItem Header="File">
                 <MenuItem Header="Open"/>
                 <MenuItem Header="Save"/>
+                <MenuItem Header="Test add new item"/>
             </MenuItem>
         </Menu>
     </Grid>

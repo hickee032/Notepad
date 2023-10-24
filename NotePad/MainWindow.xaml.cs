@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NotePad.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,8 +21,23 @@ namespace NotePad
     /// </summary>
     public partial class MainWindow : Window
     {
+        public MainTabItem mti { get; set; }
+
         public MainWindow() {
             InitializeComponent();
+            mti = new MainTabItem();
+        }
+
+        public void RefreshLists() {
+            
+            this.DataContext = null;
+            this.DataContext = mti;
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e) {
+
+
+
         }
     }
 }

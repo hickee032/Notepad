@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace NotePad.Classes
@@ -57,7 +58,15 @@ namespace NotePad.Classes
             tb.AutoWordSelection = true;
             tb.Text = "";
             tb.AcceptsReturn= true;
+
+            tab.Header= header;
+            tab.Content= tb;
+
+            hWin.RefreshLists();
+
         }
+
+        public MainWindow hWin => (MainWindow)Application.Current.MainWindow;
 
         private void TextboxMenuClicks(object sender, System.Windows.RoutedEventArgs e) {
 
