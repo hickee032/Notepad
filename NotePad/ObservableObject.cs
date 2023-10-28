@@ -13,7 +13,7 @@ namespace NotePad
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public void OnpropertyChanged<T>(ref T property, T value, [CallerMemberName] string propertyName = "") {
+        public void OnPropertyChanged<T>(ref T property, T value, [CallerMemberName] string propertyName = "") {
 
             property = value;
             var handler = PropertyChanged;
