@@ -1,4 +1,5 @@
-﻿using NotePad.Models;
+﻿using Microsoft.Win32;
+using NotePad.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -30,6 +31,29 @@ namespace NotePad.ViewModels
         public void SaveFile() {
         
             File.WriteAllText(Document.FilePath, Document.Text);
+        }
+        private void SaveFileAs() {
+
+            var saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text File (*.txt)|*.txt";
+            if (saveFileDialog.ShowDialog() == true) {
+                DockFile(saveFileDialog);
+                File.WriteAllText(saveFileDialog.FileName, Document.Text);
+            }
+        }
+        private void OpenFile() {
+            var openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true) {
+                DockFile(openFileDialog);
+                Document.Text = File.ReadAllText(openFileDialog.FileName);
+            }
+        }
+
+        private void DockFile<T>(T dialog) where T : FileDialog {
+
+            Document.FilePath = dialog.FileName;
+            Document.FileName+= dialog.SafeFileName;
+        
         }
 
     }
