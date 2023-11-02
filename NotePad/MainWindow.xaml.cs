@@ -23,5 +23,6 @@ namespace NotePad
         public MainWindow() {
             InitializeComponent();
         }
+
     }
 }

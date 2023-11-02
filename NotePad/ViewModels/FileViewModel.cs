@@ -13,7 +13,6 @@ namespace NotePad.ViewModels
     public class FileViewModel
     {
         public DocumentModel Document { get; private set; }
-
         public ICommand NewCommand { get;}
         public ICommand SaveCommand { get; }
         public ICommand SaveAsCommand { get; }
@@ -21,6 +20,11 @@ namespace NotePad.ViewModels
 
         public FileViewModel(DocumentModel document) {
             Document = document;
+            NewCommand = new RelayCommand(NewFile);
+            SaveCommand = new RelayCommand(SaveFile);
+            SaveAsCommand = new RelayCommand(SaveFileAs);
+            OpenCommand = new RelayCommand(OpenFile);
+
         }
         public void NewFile() { 
 

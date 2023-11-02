@@ -11,21 +11,21 @@ namespace NotePad.Models
         private string _text;
         public string Text {
             get { return _text; }
-            set { OnpropertyChanged(ref _text, value); }
+            set { OnPropertyChanged(ref _text, value); }
         
         }
 
         private string _filePath;
         public string FilePath {
             get { return _filePath; }
-            set { OnpropertyChanged(ref _filePath, value); }
+            set { OnPropertyChanged(ref _filePath, value); }
 
         }
 
         private string _fileName;
         public string FileName {
             get { return _fileName; }
-            set { OnpropertyChanged(ref _fileName, value); }
+            set { OnPropertyChanged(ref _fileName, value); }
 
         }
 

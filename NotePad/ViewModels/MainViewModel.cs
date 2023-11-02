@@ -11,7 +11,7 @@ namespace NotePad.ViewModels
     {
         private DocumentModel _document;
 
-        public EditorViewModel Editer { get; set; }
+        public EditorViewModel Editor { get; set; }
         public FileViewModel File { get; set; }
         public HelpViewModel Help { get; set; }
 
@@ -19,7 +19,7 @@ namespace NotePad.ViewModels
 
             _document= new DocumentModel();
             Help= new HelpViewModel();
-            Editer = new EditorViewModel(_document);
+            Editor = new EditorViewModel(_document);
             File = new FileViewModel(_document);
         
         }
