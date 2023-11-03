@@ -21,7 +21,7 @@ namespace NotePad.ViewModels
         public FileViewModel(DocumentModel document) {
             Document = document;
             NewCommand = new RelayCommand(NewFile);
-            SaveCommand = new RelayCommand(SaveFile);
+            SaveCommand = new RelayCommand(SaveFile, () => !Document.isEmpty);
             SaveAsCommand = new RelayCommand(SaveFileAs);
             OpenCommand = new RelayCommand(OpenFile);
 
@@ -41,6 +41,7 @@ namespace NotePad.ViewModels
             var saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Text File (*.txt)|*.txt";
             if (saveFileDialog.ShowDialog() == true) {
+
                 DockFile(saveFileDialog);
                 File.WriteAllText(saveFileDialog.FileName, Document.Text);
             }
@@ -48,6 +49,7 @@ namespace NotePad.ViewModels
         private void OpenFile() {
             var openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == true) {
+
                 DockFile(openFileDialog);
                 Document.Text = File.ReadAllText(openFileDialog.FileName);
             }

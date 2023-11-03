@@ -15,3 +15,6 @@ C:\Users\bluep\source\repos\NotePad\NotePad\obj\Debug\NotePad.csproj.GenerateRes
 C:\Users\bluep\source\repos\NotePad\NotePad\obj\Debug\NotePad.csproj.CoreCompileInputs.cache
 C:\Users\bluep\source\repos\NotePad\NotePad\obj\Debug\NotePad.exe
 C:\Users\bluep\source\repos\NotePad\NotePad\obj\Debug\NotePad.pdb
+C:\Users\bluep\source\repos\NotePad\NotePad\obj\Debug\FontDialog.g.cs
+C:\Users\bluep\source\repos\NotePad\NotePad\obj\Debug\FontDialog.baml
+C:\Users\bluep\source\repos\NotePad\NotePad\obj\Debug\HelpDialog.g.cs

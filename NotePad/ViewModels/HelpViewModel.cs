@@ -16,6 +16,8 @@ namespace NotePad.ViewModels
         }
         private void DisplayAbout() {
 
+            var helpDialog = new HelpDialog();
+            helpDialog.ShowDialog();
         }
     }
 }
