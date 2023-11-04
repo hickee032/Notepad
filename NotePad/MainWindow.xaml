@@ -21,22 +21,25 @@
                 </MenuItem>
                 <MenuItem Header="Format" DataContext="{Binding Editor}">
                     <MenuItem Header="Format" Command="{Binding FormatCommand}"/>
-                    <MenuItem Header="Word Wrpa" Command="{Binding WrapCommand}"/>
+                    <MenuItem Header="Word Wrpa" Command="{Binding WrapCommand}" IsChecked="{Binding Format.isWrapped}"/>
                 </MenuItem>
                 <MenuItem Header="Help" DataContext="{Binding Help}">
                     <MenuItem Header="About" Command="{Binding HelpCommand}"/>
                 </MenuItem>
             </Menu.Items>
         </Menu>
+        
         <DockPanel>
             <TextBlock DockPanel.Dock="Bottom"
                        DataContext="{Binding File.Document}"
                        Text="{Binding FilePath}"/>
+            
             <TextBox DockPanel.Dock="Top"
                      VerticalScrollBarVisibility="Visible"
-                     DataContext="{Binding Editer}"
+                     DataContext="{Binding Editor}"
                      FontFamily="{Binding Format.Family}"
                      FontSize="{Binding Format.Size}"
+                     FontStyle="{Binding Format.Style}"
                      FontWeight="{Binding Format.Weight}"
                      TextWrapping="{Binding Format.Wrap}"
                      AcceptsReturn="True"

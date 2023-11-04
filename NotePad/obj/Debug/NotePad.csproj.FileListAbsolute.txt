@@ -18,3 +18,4 @@ C:\Users\bluep\source\repos\NotePad\NotePad\obj\Debug\NotePad.pdb
 C:\Users\bluep\source\repos\NotePad\NotePad\obj\Debug\FontDialog.g.cs
 C:\Users\bluep\source\repos\NotePad\NotePad\obj\Debug\FontDialog.baml
 C:\Users\bluep\source\repos\NotePad\NotePad\obj\Debug\HelpDialog.g.cs
+C:\Users\bluep\source\repos\NotePad\NotePad\obj\Debug\HelpDialog.baml

@@ -20,8 +20,7 @@
             About
             </TextBlock>
             <TextBlock TextWrapping="Wrap">
-            This is a C# WPF sample notepad application
-            written by Joe, from ToskersCorner.com<LineBreak/>
+            샘플 메모장 애플리케이션입니다.<LineBreak/>
             </TextBlock>
             <TextBlock FontSize="18"
                     FontWeight="SemiBold">

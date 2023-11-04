@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Notepad;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,6 +19,7 @@ namespace NotePad.ViewModels
 
             var helpDialog = new HelpDialog();
             helpDialog.ShowDialog();
+            
         }
     }
 }
